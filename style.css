@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Multipie";
+  src: url(../src/fonts/Multipie.otf);
+}
+
+/*:root{
+
+  ich habe bewusst keine Variablen definiert, da es meiner Meinung nach bei einem so kleinen Projekt keinen sinn macht.
+  
+  definieren der Variable:
+
+    --primary-color: hier die farbe definieren;
+  
+  verwenden der Variable:
+
+    background-color: var(--primary-color)
+}*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url(../src/images/DALL·E21.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1rem;
+}
+
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  width: 6rem;
+  height: 5rem;
+  background-color: #93bcba;
+  border-radius: 50%;
+  font-size: 2rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Multipie";
+}
+
+h1,
+h2,
+p {
+  color: white;
+}
+
+h1 {
+  font-family: "Multipie";
+  font-size: 10vw;
+}
+
+@media (min-width: 748px) {
+  body {
+    background-image: url("../src/images/DALL·E20.webp");
+    background-attachment: fixed;
+  }
+
+  nav {
+    position: relative;
+    top: 500px;
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 4s ease-in-out forwards;
+  margin-top: 5rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 5rem;
+}
+
+label {
+  color: white;
+}
+
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: rgb(210, 206, 206);
+  font-size: 14px;
+  font-style: italic;
+  opacity: 1;
+}
+
+.play-pause-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-family: "Multipie";
+  position: relative;
+  bottom: 60px;
+  margin-top: 3rem;
+}
+
+.butt-box {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #f7d6b4;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #93bcba;
+}
+
+#stressValue {
+  font-weight: bold;
+}
+
+.story h4 {
+  margin-bottom: 2rem;
+  text-shadow: none;
+  font-size: 2rem;
+  font-family: "Multipie";
+}
+
+.story {
+  margin-top: 3rem;
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.dream {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 2rem;
+  bottom: 0;
+}
+
+footer p {
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 10px;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+/* Ab hier beginnt das styling für den slider*/
+
+.slider-container {
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    rgb(138, 233, 138),
+    rgb(230, 214, 72),
+    rgb(233, 129, 129)
+  );
+  opacity: 0.7;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 40px;
+  border-radius: 5px;
+  background: #010000;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.value {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.val-button {
+  font-family: "Multipie";
+  text-decoration: none;
+  color: white;
+  background-color: #93bcba;
+  border-radius: 5px;
+  padding: 0.3rem;
+  position: relative;
+  top: 2rem;
+  margin-bottom: 2rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+label {
+  text-shadow: 1px 1px 2px black;
+  font-size: 1rem;
+}
+
+fieldset input {
+  height: 2rem;
+  background-color: #93bcba;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 5rem;
+  background-color: #93bcba;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*kontakt.html*/
+
+fieldset label {
+  font-family: "Multipie";
+}
+
+.butt-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  font-family: 'Multipie';
+  font-size: 1.5rem;
+}
+
+/*value.html*/
+
+.back-button {
+  font-family: "Multipie";
+  text-decoration: none;
+  color: white;
+  background-color: #93bcba;
+  border-radius: 5px;
+  padding: 0.3rem;
+  position: relative;
+  top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.values-list ol{
+  text-shadow: 1px 1px 2px black;
+  list-style:none;
+}

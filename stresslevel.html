@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>breatheIN <> breatheOUT</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+        <li><a href="/index.html">Logout</a></li>
+      </ul>
+    </nav>
+    <div class="slider-container">
+      <div class="player-container">
+        <audio
+          id="audioPlayer"
+          src="../src/audio/Artur Aravidi - Amazing World.mp3.mp3"
+        ></audio>
+        <button class="play-pause-button" id="playPauseButton">Play</button>
+      </div>
+      <label for="myRange">how stressed you are ?</label>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="0"
+        class="slider"
+        id="myRange"
+      />
+      <div class="value" id="sliderValue">0</div>
+      <div id="chartContainer">
+        <canvas id="valueChart"></canvas>
+      </div>
+      <a class="val-button" href="../value.html">Show All Values</a>
+    </div>
+    <div class="story">
+      <h4>A short little story</h4>
+      <p class="dream">
+        Certainly! Here's the story adjusted to evoke a sense of dreaming and
+        relaxation:
+      </p>
+      <p>
+        In a small town on the edge of a dense forest lived an old woodcarver
+        named Markus. Known for his calm demeanor and exquisite woodwork, Markus
+        ventured into the forest every morning in search of the perfect piece of
+        wood for his next masterpiece. One day, deep in the woods, Markus
+        stumbled upon a mysterious clearing bathed in gentle sunlight. In the
+        center of this clearing stood a majestic tree with a mighty trunk and a
+        canopy that extended in all directions. The leaves of this tree
+        shimmered in a soothing green and swayed gently in the light breeze.
+        Markus felt drawn to this place of tranquility and natural beauty. He
+        sat beneath the tree, took out his tools, and began carving a small
+        figure from a piece of wood. As he carved, he listened to the gentle
+        rustling of the leaves above him and the harmonious chirping of birds
+        nearby. Time seemed to stand still as he immersed himself completely in
+        his work. A deep sense of peace filled his heart, and all his worries
+        seemed to fade away for a moment. When he finished, Markus admired the
+        carved figure in his hands. It had turned out perfect, with smooth lines
+        and a warm aura that reflected his love for art and nature. Carefully,
+        he placed the figure beside him on the ground and leaned back against
+        the tree trunk. He closed his eyes and savored the peaceful atmosphere
+        around him, interrupted only by the gentle rustling of leaves and the
+        soft chirping of birds. As the sun slowly set behind the tree tops,
+        Markus opened his eyes and stood up. He picked up the carved figure,
+        feeling contentment in his heart, and made his way back to town. Along
+        the way, he smiled at passersby who greeted him, filled with inner peace
+        and serenity that the visit to the secret clearing had bestowed upon
+        him. From that day on, Markus often returned to the special clearing.
+        Beneath the majestic tree, he found not only inspiration for his
+        artworks but also a place of tranquility and escape from everyday
+        worries. Each time he sat there, he felt embraced by nature and
+        transported to a world of creativity and harmony.
+      </p>
+    </div>
+
+    <footer><p>Copyright &copy; 2024 Peter Richter</p></footer>
+    <script src="script.js"></script>
+    <script src="audio.js"></script>
+    <script src="slider.js"></script>
+  </body>
+</html>
